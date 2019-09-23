@@ -3,24 +3,40 @@
     "target": "esnext",
     "module": "esnext",
     "strict": true,
+    "allowJs": true,
     "jsx": "preserve",
     "importHelpers": true,
     "moduleResolution": "node",
     "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "baseUrl": ".",
+    "rootDir": ".",
+    "outDir": "dist",
     "types": [
       "webpack-env",
-      "jest"
+      "jest",
+      "reflect-metadata",
+      "vuetify"
     ],
     "paths": {
       "@/*": [
-        "src/*"
+        "client/src/*"
+      ],
+      "@c/*": [
+        "common/src/*"
+      ],
+      "@s/*": [
+        "server/src/*"
+      ],
+      "@root/*": [
+        "./*"
       ]
     },
     "lib": [
+      "es6",
       "esnext",
       "dom",
       "dom.iterable",
@@ -28,11 +44,12 @@
     ]
   },
   "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue",
-    "tests/**/*.ts",
-    "tests/**/*.tsx"
+    "*/src/**/*.js",
+    "*/src/**/*.ts",
+    "*/src/**/*.tsx",
+    "*/src/**/*.vue",
+    "*/tests/**/*.ts",
+    "*/tests/**/*.tsx"
   ],
   "exclude": [
     "node_modules"
