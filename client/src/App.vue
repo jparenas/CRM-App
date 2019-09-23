@@ -33,7 +33,7 @@
     </v-navigation-drawer>
 
     <v-app-bar app elevate-on-scroll dark clipped-left v-if="showNavigation()">
-      <v-toolbar-title>App</v-toolbar-title>
+      <v-toolbar-title>CRM App</v-toolbar-title>
     </v-app-bar>
 
     <v-content>
