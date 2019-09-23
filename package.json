@@ -6,7 +6,7 @@
     "serve": "npm run build && npm run start",
     "build": "tsc -p tsconfig-build.json && npm run copy:public",
     "lint": "vue-cli-service lint client common server",
-    "build:prod": "tsc -p tsconfig-build.json && vue-cli-service build --modern && npm run copy:public",
+    "build:prod": "cross-env NODE_ENV=production tsc -p tsconfig-build.json && vue-cli-service build --modern && npm run copy:public",
     "clean": "rimraf dist",
     "copy:public": "mkdirp dist/server/public && copyfiles -u 2 -a \"server/public/**/*\" dist/server/public",
     "dev": "npm run clean && cross-env NODE_ENV=development nodemon --exec \"npm rum serve\"",
